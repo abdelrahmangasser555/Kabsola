@@ -314,7 +314,7 @@ export const SearchBar = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex gap-4">
+                    <div className="flex gap-4 mobilecol">
                       <img
                         src={drug.image}
                         alt={drug.name}
@@ -678,5 +678,147 @@ export const mockDrugs = [
       "Levothyroxine should be taken on an empty stomach, preferably in the morning, at least 30 minutes before eating. Consistency in timing is important for effectiveness.",
     image:
       "https://th.bing.com/th/id/OIP.sOVvpMLZGEhyWYGM-e8VHwHaE7?w=900&h=599&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 21,
+    name: "Metformin",
+    nameArabic: "ميتفورمين",
+    categories: ["diabetes", "blood sugar control"],
+    usage: "Blood sugar regulation in type 2 diabetes",
+    description:
+      "Metformin is an oral diabetes medication that helps control blood sugar levels, mainly by decreasing glucose production in the liver.",
+    usageDescription:
+      "Metformin is taken with meals to reduce stomach discomfort. Dosage is adjusted based on blood sugar response.",
+    image:
+      "https://th.bing.com/th/id/OIP.x1zLsryeIAQFEM7v7KuwDAHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 22,
+    name: "Amlodipine",
+    nameArabic: "أملوديبين",
+    categories: ["hypertension", "heart disease"],
+    usage: "Blood pressure and angina control",
+    description:
+      "Amlodipine is a calcium channel blocker that helps relax blood vessels, improving blood flow and lowering blood pressure.",
+    usageDescription:
+      "Amlodipine is taken once daily, with or without food. It should be taken at the same time each day for best results.",
+    image:
+      "https://th.bing.com/th/id/OIP.rXQtqZmfZ1cWJQqDBs-VQAHaE8?w=900&h=600&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 23,
+    name: "Atorvastatin",
+    nameArabic: "أتورفاستاتين",
+    categories: ["cholesterol", "heart disease"],
+    usage: "Cholesterol and triglyceride reduction",
+    description:
+      "Atorvastatin is a statin medication that lowers bad cholesterol (LDL) and increases good cholesterol (HDL), reducing heart disease risk.",
+    usageDescription:
+      "Taken once daily, usually in the evening. A low-fat diet and regular exercise enhance its effectiveness.",
+    image: "https://c8.alamy.com/comp/DF9JF3/atorvastatin-tablets-DF9JF3.jpg",
+  },
+  {
+    id: 24,
+    name: "Omeprazole",
+    nameArabic: "أوميبرازول",
+    categories: ["acid reflux", "ulcers"],
+    usage: "Acid reduction in stomach disorders",
+    description:
+      "Omeprazole is a proton pump inhibitor (PPI) that reduces stomach acid, helping treat GERD, ulcers, and heartburn.",
+    usageDescription:
+      "Taken before meals, typically once daily. It should not be crushed or chewed.",
+    image:
+      "https://th.bing.com/th/id/OIP.cRtDfhK8GvD3I2jH2h2_wAHaEo?w=900&h=562&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 25,
+    name: "Losartan",
+    nameArabic: "لوسارتان",
+    categories: ["hypertension", "kidney protection"],
+    usage: "Blood pressure and kidney protection",
+    description:
+      "Losartan is an angiotensin receptor blocker (ARB) that helps lower blood pressure and protects kidneys in diabetic patients.",
+    usageDescription:
+      "Losartan is taken once daily, with or without food. It may take several weeks for full benefits to appear.",
+    image:
+      "https://th.bing.com/th/id/OIP.9efHksyfq5yTLcs3JS49RgHaEc?w=1024&h=606&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 26,
+    name: "Salbutamol",
+    nameArabic: "سالبيوتامول",
+    categories: ["asthma", "bronchodilator"],
+    usage: "Relief of asthma and breathing difficulties",
+    description:
+      "Salbutamol is a fast-acting bronchodilator used to treat wheezing and shortness of breath in asthma and COPD.",
+    usageDescription:
+      "Used as an inhaler or nebulizer as needed for quick relief. Overuse can reduce effectiveness.",
+    image:
+      "https://th.bing.com/th/id/OIP.3uIQa7v7CDAkPepRRl0ljwHaE7?w=1280&h=853&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 27,
+    name: "Amoxicillin",
+    nameArabic: "أموكسيسيلين",
+    categories: ["antibiotic", "bacterial infection"],
+    usage: "Treatment of bacterial infections",
+    description:
+      "Amoxicillin is a penicillin-type antibiotic used to treat respiratory, urinary tract, and skin infections.",
+    usageDescription:
+      "Taken every 8-12 hours with food to avoid stomach upset. Complete the full course to prevent resistance.",
+    image:
+      "https://th.bing.com/th/id/OIP.6_rvjEfMJ3HPPsWz3_a2dwHaFi?w=1024&h=768&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 28,
+    name: "Ciprofloxacin",
+    nameArabic: "سيبروفلوكساسين",
+    categories: ["antibiotic", "bacterial infection"],
+    usage: "Broad-spectrum antibiotic for infections",
+    description:
+      "Ciprofloxacin is a fluoroquinolone antibiotic effective against various bacterial infections, including UTIs and respiratory infections.",
+    usageDescription:
+      "Should be taken with a full glass of water, avoiding dairy products and antacids. Complete the course as prescribed.",
+    image:
+      "https://th.bing.com/th/id/OIP.xgAhqR07Up8QwvDE0X-x6AHaFj?w=800&h=600&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 29,
+    name: "Warfarin",
+    nameArabic: "وارفارين",
+    categories: ["anticoagulant", "blood thinner"],
+    usage: "Prevention of blood clots",
+    description:
+      "Warfarin is a blood thinner used to prevent strokes, heart attacks, and clot-related conditions.",
+    usageDescription:
+      "Requires regular blood monitoring to adjust dosage. Avoid sudden changes in vitamin K intake.",
+    image:
+      "https://th.bing.com/th/id/OIP.sOQ3M55rtwO6z8eAJsox-QHaFj?w=900&h=675&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 30,
+    name: "Clopidogrel",
+    nameArabic: "كلوبيدوجريل",
+    categories: ["antiplatelet", "heart disease"],
+    usage: "Prevention of heart attacks and strokes",
+    description:
+      "Clopidogrel prevents platelets from sticking together, reducing the risk of blood clots in heart disease and stroke patients.",
+    usageDescription:
+      "Taken once daily with or without food. Consistency in timing is essential for effectiveness.",
+    image:
+      "https://th.bing.com/th/id/OIP.EEbL8Kbl2GfiCKHzDGBrgAHaFD?w=1300&h=887&rs=1&pid=ImgDetMain",
+  },
+  {
+    id: 31,
+    name: "Panadol",
+    nameArabic: "بنادول",
+    categories: ["pain reliever", "fever reducer"],
+    usage: "Relieves mild to moderate pain and fever",
+    description:
+      "Panadol contains paracetamol, which is used to treat headaches, muscle aches, arthritis, backaches, toothaches, colds, and fevers.",
+    usageDescription:
+      "Take with water every 4-6 hours as needed. Do not exceed the recommended dose to avoid liver damage.",
+    image:
+      "https://th.bing.com/th/id/OIP.47JJkP2jXRl7paPt1tY2mQHaHa?w=2000&h=2000&rs=1&pid=ImgDetMain",
   },
 ];

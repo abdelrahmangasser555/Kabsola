@@ -45,7 +45,7 @@ export default function Schedule() {
         minHeight: "100vh",
         backgroundColor: "#f9f9f9",
         padding: "1rem",
-        paddingTop: "70px",
+        paddingTop: "120px",
       }}
     >
       <TopNavBar name="Schedule">
@@ -66,7 +66,15 @@ export default function Schedule() {
       </TopNavBar>
 
       {scheduledDrugs.length === 0 ? (
-        <div style={{ textAlign: "center", marginTop: "2rem" }}>
+        <div
+          style={{
+            textAlign: "center",
+            marginTop: "2rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <PillBottle size={100} />
           <h1 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
             No drugs scheduled
@@ -156,29 +164,17 @@ const DrugCard = ({ drug, handleRemoveFromState }: any) => {
   }
 
   return (
-    <Card style={{ maxWidth: "600px", margin: "20px" }}>
+    <Card className=" mx-auto my-5 mobilecol   ">
       <CardHeader>
-        <div style={{ display: "flex", gap: "20px" }}>
+        <div className="mobilecol flex gap-5">
           <img
-            src={drug.image}
-            alt={drug.name}
-            style={{
-              width: "150px",
-              height: "150px",
-              objectFit: "cover",
-              borderRadius: "8px",
-            }}
+            src={drug?.image}
+            alt={drug?.name}
+            className="w-48 h-48  md:w-36 md:h-36 object-cover rounded-lg"
           />
-          <div style={{ flex: 1 }}>
-            <CardTitle style={{ marginBottom: "12px" }}>{drug.name}</CardTitle>
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "8px",
-                marginBottom: "12px",
-              }}
-            >
+          <div className="flex-1">
+            <CardTitle className="mb-3">{drug.name}</CardTitle>
+            <div className="flex flex-wrap gap-2 mb-3">
               {drug?.categories?.map(
                 (category: string | any, index: number) => (
                   <Badge key={index} variant={getCategoryVariant(category)}>
@@ -187,34 +183,24 @@ const DrugCard = ({ drug, handleRemoveFromState }: any) => {
                 )
               )}
             </div>
-            <CardDescription style={{ fontSize: "16px" }}>
+            <CardDescription className="text-base">
               {drug.usage}
             </CardDescription>
           </div>
         </div>
       </CardHeader>
 
-      <CardContent style={{ paddingTop: "20px" }}>
+      <CardContent className="pt-5 w-[100%]">
         <Accordion type="single" collapsible>
           <AccordionItem value="description">
             <AccordionTrigger>
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "8px" }}
-              >
+              <div className="flex  items-center gap-2">
                 <Info size={18} />
                 Description
               </div>
             </AccordionTrigger>
             <AccordionContent>
-              <p
-                style={{
-                  lineHeight: "1.6",
-                  color: "#444",
-                  backgroundColor: "hsl(var(--muted))",
-                  padding: "12px",
-                  borderRadius: "6px",
-                }}
-              >
+              <p className="leading-6 text-gray-700 bg-muted p-3 rounded-md">
                 {drug.description}
               </p>
             </AccordionContent>
@@ -222,35 +208,20 @@ const DrugCard = ({ drug, handleRemoveFromState }: any) => {
 
           <AccordionItem value="usage">
             <AccordionTrigger>
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "8px" }}
-              >
+              <div className="flex items-center gap-2">
                 <Info size={18} />
                 Usage Instructions
               </div>
             </AccordionTrigger>
             <AccordionContent>
-              <p
-                style={{
-                  lineHeight: "1.6",
-                  color: "#444",
-                  backgroundColor: "hsl(var(--muted))",
-                  padding: "12px",
-                  borderRadius: "6px",
-                }}
-              >
+              <p className="leading-6 text-gray-700 bg-muted p-3 rounded-md">
                 {drug.usageDescription}
               </p>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
       </CardContent>
-      <div
-        style={{
-          padding: "20px",
-          overflowY: "auto",
-        }}
-      >
+      <div className="p-5 overflow-y-auto max-w-[100%] pr-2">
         <SeveralDays
           state={drugState}
           setState={setDrugState}
@@ -258,22 +229,12 @@ const DrugCard = ({ drug, handleRemoveFromState }: any) => {
         />
       </div>
 
-      <CardFooter
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          paddingTop: "0",
-        }}
-      >
+      <CardFooter className="flex justify-end pt-0">
         <Button variant="destructive" onClick={handleDelete}>
           Delete
           <Trash2 size={24} />
         </Button>
-        <Button
-          variant="default"
-          style={{ marginLeft: "1rem" }}
-          onClick={handleSave}
-        >
+        <Button variant="default" className="ml-4" onClick={handleSave}>
           Save
           <Save size={24} />
         </Button>

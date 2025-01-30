@@ -23,9 +23,10 @@ export default function TopNavBar({
         backdropFilter: "blur(10px)",
         padding: "16px",
         zIndex: 10,
-        height: "70px",
+
         boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
       }}
+      className="mobilecol h-[100px] md:h-[70px] sm:h-[100px]"
     >
       {/* Left-side children */}
       <div style={{ flexShrink: 0 }}></div>

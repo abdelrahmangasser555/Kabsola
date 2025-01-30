@@ -89,7 +89,7 @@ const PharmacyContactCard = ({
             </Button>
           )}
 
-          {effectiveWhatsappNumber && (
+          {whatsappNumber && (
             <Button
               variant="outline"
               className="flex items-center gap-2"
@@ -117,7 +117,7 @@ const PharmacyContactCard = ({
                     className="flex flex-col bg-secondary/20 p-2 rounded-md"
                   >
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-2 mobilecol">
                         {drug?.image && (
                           <img
                             src={drug?.image}
